@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Abtra_Es_ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Assunto">
+    <Key>
+      <PropertyRef Name="AssuntoID" />
+    </Key>
+    <Property Name="AssuntoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Assunto1" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="TabAbtra" Relationship="Self.FK_TabAbtra_Assunto" FromRole="Assunto" ToRole="TabAbtra" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="DepartamentoID" />
+    </Key>
+    <Property Name="DepartamentoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartamentoNome" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="TabAbtra" Relationship="Self.FK_TabAbtra_Departamento" FromRole="Departamento" ToRole="TabAbtra" />
+  </EntityType>
+  <EntityType Name="TabAbtra">
+    <Key>
+      <PropertyRef Name="AlunoId" />
+    </Key>
+    <Property Name="AlunoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AlunoNome" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="CPF" Type="Int32" Nullable="false" />
+    <Property Name="DataDeNascimento" Type="Int32" Nullable="false" />
+    <Property Name="DepartamentoID" Type="Int32" Nullable="false" />
+    <Property Name="AssuntoID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Assunto" Relationship="Self.FK_TabAbtra_Assunto" FromRole="TabAbtra" ToRole="Assunto" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK_TabAbtra_Departamento" FromRole="TabAbtra" ToRole="Departamento" />
+  </EntityType>
+  <Association Name="FK_TabAbtra_Assunto">
+    <End Role="Assunto" Type="Self.Assunto" Multiplicity="1" />
+    <End Role="TabAbtra" Type="Self.TabAbtra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assunto">
+        <PropertyRef Name="AssuntoID" />
+      </Principal>
+      <Dependent Role="TabAbtra">
+        <PropertyRef Name="AssuntoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TabAbtra_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+    <End Role="TabAbtra" Type="Self.TabAbtra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="DepartamentoID" />
+      </Principal>
+      <Dependent Role="TabAbtra">
+        <PropertyRef Name="DepartamentoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Abtra_Es_ProjectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Assunto" EntityType="Self.Assunto" />
+    <EntitySet Name="Departamento" EntityType="Self.Departamento" />
+    <EntitySet Name="TabAbtra" EntityType="Self.TabAbtra" />
+    <AssociationSet Name="FK_TabAbtra_Assunto" Association="Self.FK_TabAbtra_Assunto">
+      <End Role="Assunto" EntitySet="Assunto" />
+      <End Role="TabAbtra" EntitySet="TabAbtra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TabAbtra_Departamento" Association="Self.FK_TabAbtra_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="TabAbtra" EntitySet="TabAbtra" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

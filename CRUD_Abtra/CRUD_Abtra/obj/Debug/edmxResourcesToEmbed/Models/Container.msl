@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ContanainerModelStoreContainer" CdmEntityContainer="ContaneirContext">
+    <EntitySetMapping Name="Contaneir">
+      <EntityTypeMapping TypeName="ContanainerModel.Contaneir">
+        <MappingFragment StoreEntitySet="Contaneir">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="LocalDePartida" ColumnName="LocalDePartida" />
+          <ScalarProperty Name="Registro" ColumnName="Registro" />
+          <ScalarProperty Name="DateFicha" ColumnName="DateFicha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

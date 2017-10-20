@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Mvc_App_Crud.Models.Aluno>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AlunoNome)
+        </th>
+        <th>
+            Assunto
+        </th>
+        <th>
+            Departamento
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlunoNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Assunto.Assunto1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departamento.DepartamentoNome)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AlunoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AlunoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AlunoID })
+        </td>
+    </tr>
+}
+
+</table>

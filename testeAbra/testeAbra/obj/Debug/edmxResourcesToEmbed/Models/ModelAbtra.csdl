@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AbtraBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Abtra">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Nome" Type="String" MaxLength="250" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Sobrenome" Type="String" MaxLength="250" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Idade" Type="Int32" Nullable="false" />
+    <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FichaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="AbtraBDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Abtra" EntityType="Self.Abtra" />
+  </EntityContainer>
+</Schema>

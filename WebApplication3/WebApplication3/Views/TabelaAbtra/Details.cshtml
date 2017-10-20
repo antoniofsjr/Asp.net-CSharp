@@ -1,0 +1,90 @@
+﻿@model WebApplication3.Models.TabelaAbtra
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>TabelaAbtra</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereço)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereço)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FichaDeCadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FichaDeCadastro)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CPF }) |
+    @Html.ActionLink("Voltar ao Index", "Index")
+</p>

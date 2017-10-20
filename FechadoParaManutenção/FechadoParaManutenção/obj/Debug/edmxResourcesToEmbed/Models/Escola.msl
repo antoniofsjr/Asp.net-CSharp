@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Abtra_Es_ProjectModelStoreContainer" CdmEntityContainer="Abtra_Es_ProjectEntities">
+    <EntitySetMapping Name="Assunto">
+      <EntityTypeMapping TypeName="Abtra_Es_ProjectModel.Assunto">
+        <MappingFragment StoreEntitySet="Assunto">
+          <ScalarProperty Name="AssuntoID" ColumnName="AssuntoID" />
+          <ScalarProperty Name="Assunto1" ColumnName="Assunto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departamento">
+      <EntityTypeMapping TypeName="Abtra_Es_ProjectModel.Departamento">
+        <MappingFragment StoreEntitySet="Departamento">
+          <ScalarProperty Name="DepartamentoID" ColumnName="DepartamentoID" />
+          <ScalarProperty Name="DepartamentoNome" ColumnName="DepartamentoNome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TabAbtra">
+      <EntityTypeMapping TypeName="Abtra_Es_ProjectModel.TabAbtra">
+        <MappingFragment StoreEntitySet="TabAbtra">
+          <ScalarProperty Name="AlunoId" ColumnName="AlunoId" />
+          <ScalarProperty Name="AlunoNome" ColumnName="AlunoNome" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="DataDeNascimento" ColumnName="DataDeNascimento" />
+          <ScalarProperty Name="DepartamentoID" ColumnName="DepartamentoID" />
+          <ScalarProperty Name="AssuntoID" ColumnName="AssuntoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

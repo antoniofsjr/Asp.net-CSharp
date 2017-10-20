@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Abtra_FinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TabelaAbtra">
+    <Key>
+      <PropertyRef Name="CPF" />
+    </Key>
+    <Property Name="Nome" Type="nchar" MaxLength="90" Nullable="false" />
+    <Property Name="Sobrenome" Type="nchar" MaxLength="90" Nullable="false" />
+    <Property Name="DataDeNascimento" Type="datetime" Nullable="false" />
+    <Property Name="Sexo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="CPF" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="Endereço" Type="nchar" MaxLength="90" Nullable="false" />
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="Telefone" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="CEP" Type="nchar" MaxLength="9" Nullable="false" />
+    <Property Name="FichaDeCadastro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Abtra_FinalModelStoreContainer">
+    <EntitySet Name="TabelaAbtra" EntityType="Self.TabelaAbtra" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

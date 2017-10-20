@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Abtra_FinalModelStoreContainer" CdmEntityContainer="Abtra_Entities">
+    <EntitySetMapping Name="TabelaAbtra">
+      <EntityTypeMapping TypeName="Abtra_FinalModel.TabelaAbtra">
+        <MappingFragment StoreEntitySet="TabelaAbtra">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Sobrenome" ColumnName="Sobrenome" />
+          <ScalarProperty Name="DataDeNascimento" ColumnName="DataDeNascimento" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Endereço" ColumnName="Endereço" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="FichaDeCadastro" ColumnName="FichaDeCadastro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

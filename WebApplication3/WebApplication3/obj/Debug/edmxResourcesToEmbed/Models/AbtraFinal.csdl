@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Abtra_FinalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TabelaAbtra">
+    <Key>
+      <PropertyRef Name="CPF" />
+    </Key>
+    <Property Name="Nome" Type="String" MaxLength="90" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Sobrenome" Type="String" MaxLength="90" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="DataDeNascimento" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CPF" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Endereço" Type="String" MaxLength="90" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="Telefone" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="CEP" Type="String" MaxLength="9" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="FichaDeCadastro" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="Abtra_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TabelaAbtra" EntityType="Self.TabelaAbtra" />
+  </EntityContainer>
+</Schema>
